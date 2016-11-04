@@ -1,11 +1,12 @@
 {
   "pages":[
-      "pages/index/index"
+      "pages/index/index",
+      "pages/product/product"
   ],
   "window":{
       "backgroundTextStyle":"light",
-      "navigationBarBackgroundColor": "#fff",
+      "navigationBarBackgroundColor": "rgba(54, 53, 58, 1)",
       "navigationBarTitleText": "金娱黄金",
-      "navigationBarTextStyle":"black"
+      "navigationBarTextStyle":"white"
   }
 }
