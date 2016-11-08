@@ -1,3 +1,23 @@
-<!--index.wxml-->
+
 <view class="container">
+    <swiper class="playing"
+        indicator-dots="{{product.gallery.length>1?true:false}}" autoplay="{{true}}">
+        <block wx:for="{{product.gallery}}" wx:key="*this">
+            <swiper-item>
+                <view class="inner-wrapper">
+                    <image src="http://hy.jinyuen.net/upload/{{item}}" class="slide-image"></image>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="info">
+        <view class="title">{{product.name}}</view>
+        <view class="price">价值：￥{{product.price}}</view>
+        <view class="gold">兑换价：<text class="red">{{product.mg}}毫克黄金</text></view>
+    </view>
+    <view class="desc">
+        <view class="title"><text>图文介绍</text></view>
+        <image src="http://hy.jinyuen.net{{product.descImg}}" class="desc-img" 
+            style="height: {{descImgHeight}}px;" bindload="descImgLoaded"></image>
+    </view>
 </view>
